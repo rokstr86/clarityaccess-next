@@ -1,0 +1,1 @@
+export default function AboutPage(){return (<section className="container prose dark:prose-invert prose-slate py-14"><h1>We believe in clear communication</h1><p>Clarity Access helps teams write better so they can move faster.</p></section>)}
