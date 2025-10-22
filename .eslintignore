@@ -1,5 +1,10 @@
-﻿postcss.config.cjs
-*.cjs
-next.config.*
+﻿node_modules/
+.next/
+dist/
+build/
+coverage/
+**/*.config.*
+postcss.config.*
 tailwind.config.*
-vercel.json
+next.config.*
+prettier.config.*
