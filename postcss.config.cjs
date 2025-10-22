@@ -1,5 +1,4 @@
-﻿/** Next-friendly PostCSS for Tailwind v4 in ESM package contexts */
-module.exports = {
+﻿module.exports = {
   plugins: {
     "@tailwindcss/postcss": {}
   }
