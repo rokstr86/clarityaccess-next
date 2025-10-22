@@ -2,6 +2,14 @@ import type { Metadata } from "next"
 import { site } from "@/lib/site"
 import "./globals.css"
 
+// Make keywords mutable for Next Metadata (handles string | array | undefined)
+const mutableKeywords =
+  typeof site.keywords === "string"
+    ? site.keywords
+    : Array.isArray(site.keywords)
+      ? [...site.keywords] // spread removes readonly
+      : undefined
+
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
@@ -9,7 +17,7 @@ export const metadata: Metadata = {
     template: `%s · ${site.name}`,
   },
   description: site.description,
-  keywords: site.keywords,
+  keywords: mutableKeywords, // <-- fixed
   applicationName: site.shortName,
   authors: [{ name: site.name, url: site.url }],
   creator: site.creator,
