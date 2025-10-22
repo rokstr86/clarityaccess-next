@@ -4,11 +4,20 @@ import "./globals.css"
 import { Header } from "@/components/site/header"
 import { Footer } from "@/components/site/footer"
 
+// Make keywords compatible with Next Metadata: string | string[] | null
+const keywordsValue: string | string[] | null =
+  typeof site.keywords === "string"
+    ? site.keywords
+    : Array.isArray(site.keywords)
+      ? // slice() turns readonly tuples into a mutable string[]
+        (site.keywords as readonly string[]).slice()
+      : null
+
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: { default: site.name, template: `%s · ${site.name}` },
   description: site.description,
-  keywords: Array.isArray(site.keywords) ? [...site.keywords] : site.keywords,
+  keywords: keywordsValue, // <-- fixed
   applicationName: site.shortName,
   authors: [{ name: site.name, url: site.url }],
   creator: site.creator,
