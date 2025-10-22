@@ -1,30 +1,19 @@
 import type { Metadata } from "next"
 import { site } from "@/lib/site"
 import "./globals.css"
-
-// Make keywords mutable for Next Metadata (handles string | array | undefined)
-const mutableKeywords =
-  typeof site.keywords === "string"
-    ? site.keywords
-    : Array.isArray(site.keywords)
-      ? [...site.keywords] // spread removes readonly
-      : undefined
+import { Header } from "@/components/site/header"
+import { Footer } from "@/components/site/footer"
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: {
-    default: site.name,
-    template: `%s · ${site.name}`,
-  },
+  title: { default: site.name, template: `%s · ${site.name}` },
   description: site.description,
-  keywords: mutableKeywords, // <-- fixed
+  keywords: Array.isArray(site.keywords) ? [...site.keywords] : site.keywords,
   applicationName: site.shortName,
   authors: [{ name: site.name, url: site.url }],
   creator: site.creator,
   publisher: site.name,
-  alternates: {
-    canonical: "/",
-  },
+  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     url: site.url,
@@ -68,7 +57,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="min-h-screen">{children}</body>
+      <body className="min-h-screen">
+        <Header />
+        <main className="mx-auto max-w-7xl px-4 py-8">{children}</main>
+        <Footer />
+      </body>
     </html>
   )
 }
