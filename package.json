@@ -23,7 +23,7 @@
     "tailwind-merge": "^2.3.0"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "4.0.0",
+    "@tailwindcss/postcss": "^4.1.15",
     "@types/node": "^20.14.2",
     "@types/react": "19.2.2",
     "eslint": "8.57.0",
@@ -33,7 +33,7 @@
     "postcss": "8.4.41",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.6",
-    "tailwindcss": "4.0.0",
+    "tailwindcss": "^4.1.15",
     "typescript": "^5.9.3"
   },
   "lint-staged": {
@@ -43,6 +43,15 @@
     ],
     "*.{md,css,json}": [
       "prettier --write"
+    ]
+  },
+  "eslintConfig": {
+    "ignorePatterns": [
+      "postcss.config.cjs",
+      "*.cjs",
+      "next.config.*",
+      "tailwind.config.*",
+      "vercel.json"
     ]
   }
 }

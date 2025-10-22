@@ -1,0 +1,5 @@
+﻿postcss.config.cjs
+*.cjs
+next.config.*
+tailwind.config.*
+vercel.json
