@@ -1,0 +1,8 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600">
+  <rect width="100%" height="100%" fill="#f7fafc"/>
+  <rect x="60" y="60" width="780" height="480" rx="8" fill="white" stroke="#e5e7eb"/>
+  <rect x="90" y="100" width="130" height="32" rx="6" fill="#eef2ff"/>
+  <text x="100" y="121" font-family="system-ui,Segoe UI,Arial" font-size="14" fill="#3730a3">landmark: main</text>
+  <rect x="90" y="150" width="160" height="32" rx="6" fill="#ecfeff"/>
+  <text x="100" y="171" font-family="system-ui,Segoe UI,Arial" font-size="14" fill="#155e75">role: navigation</text>
+</svg>

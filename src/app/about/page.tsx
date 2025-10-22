@@ -42,7 +42,7 @@ export default function AboutPage() {
         {/* Hero image */}
         <figure className="rounded-2xl border p-2 md:p-3">
           <Image
-            src="/about/hero-scan.png"
+            src="/about/hero-scan.svg"
             width={1200}
             height={800}
             alt="ClarityAccess scanning a website and summarizing issues by severity"
@@ -56,7 +56,7 @@ export default function AboutPage() {
         </figure>
       </header>
 
-      {/* Problem → Impact with visual */}
+      {/* Problem → Impact with visuals */}
       <section className="grid gap-6 md:grid-cols-2 md:gap-8">
         <div className="rounded-2xl border p-6">
           <h2 className="text-xl font-semibold">The problem</h2>
@@ -67,7 +67,7 @@ export default function AboutPage() {
           </p>
           <figure className="mt-5">
             <Image
-              src="/about/contrast-check.png"
+              src="/about/contrast-check.svg"
               width={900}
               height={600}
               alt="Contrast check highlighting insufficient text/background contrast"
@@ -89,7 +89,7 @@ export default function AboutPage() {
           </ul>
           <figure className="mt-5">
             <Image
-              src="/about/report-pdf.png"
+              src="/about/report-pdf.svg"
               width={900}
               height={600}
               alt="Exported PDF report preview showcasing issues and remediation steps"
@@ -133,7 +133,7 @@ export default function AboutPage() {
           <IllustratedCheck
             title="Keyboard support"
             alt="Focus outline moving through interactive elements via keyboard"
-            src="/about/keyboard-nav.png"
+            src="/about/keyboard-nav.svg"
           >
             Focus order, focus visibility, and keyboard reachability for
             interactive controls.
@@ -142,7 +142,7 @@ export default function AboutPage() {
           <IllustratedCheck
             title="Headings, landmarks & ARIA"
             alt="Document landmarks and ARIA roles labeled for assistive tech"
-            src="/about/aria-roles.png"
+            src="/about/aria-roles.svg"
           >
             Proper outline and regions for screen reader navigation; valid
             roles, properties, and states.
