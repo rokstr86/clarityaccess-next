@@ -22,7 +22,7 @@
         "name": "next"
       }
     ],
-    "ignoreDeprecations": "6.0",
+
     "allowJs": true
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
